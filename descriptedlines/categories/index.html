@@ -1,0 +1,1773 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all" />
+    <meta http-equiv="imagetoolbar" content="false" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta name="description" content="Writing" />
+    <meta name="keywords" content="descriptedlines, fiction, literature reviews,the body's long madness, books, writing" />
+    <meta name="author" content="Amber Ruth Paulen" />
+    <meta name="copyright" content="Copyright 2000–2016 by Amber Ruth Paulen. All rights reserved." />
+
+
+
+
+
+
+<script type="text/javascript" src="../_scripts/lightbox.js"></script>
+<link rel="Shortcut Icon" href="../favicon.ico" type="image/x-icon" />
+
+<title>Categories | Descriptedlines: Writing</title>
+
+<link rel="alternate" type="application/atom+xml" title="Atom feed" href="../atom/index.html%3Fsection=categories" />
+
+<link rel="stylesheet" href="../_css/dl.css" type="text/css" media="screen" />
+
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" media="screen" href="/_css/ie6.css" />
+<![endif]-->
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" media="screen" href="/_css/ie7.css" />
+<![endif]-->
+
+<!-- jquery for show/hide -->
+<script type="text/javascript" src="../_scripts/jquery.js"></script>
+
+<!-- show/hide toggle and anchor highlight -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+			$("div.toggleanything").hide();
+			$("h2").click(function(){
+				$(this).next().toggle('fast');
+				// trying to get the H2 to turn black when clicking: http://api.jquery.com/toggleClass/
+				$(this).toggleClass('darkheadings');
+			});
+			
+			// http://stackoverflow.com/questions/2848627/use-anchor-to-display-div
+			$(function() {
+				if(location.hash != "") {
+					// $(location.hash + ":hidden").toggle('fast').prev("h2").toggleClass('darkheadings');
+					$(location.hash + ":hidden").toggle('fast').prev("h2").toggleClass('darkheadings');
+				}
+			});
+			
+			// TODO: Make links to local anchors (other FAQ questions) open the answer div on the same page - http://stackoverflow.com/questions/4648446/jquery-load-retrieve-page-div-by-id-in-anchor-link
+			
+			// http://andylangton.co.uk/jquery-show-hidecomment by morvi on 10.01.2010 at 23:46
+			$('a.hideAll').click(function() {
+				$('div.toggleanything').hide('fast');
+				$('h2').removeClass('darkheadings');
+			});
+			$('a.showAll').click(function() {
+				$('div.toggleanything').show('fast');
+				$('h2').addClass('darkheadings');
+			});
+			
+		});
+
+
+// ANCHOR HIGHLIGHTER - author unknown (comments below are original author's own)**************************
+
+// This technique is a combination of a technique I used for highlighting FAQ's using anchors 
+// and the ever popular yellow-fade technique used by 37 Signals in Basecamp.
+
+// Including this script in a page will automatically do two things when the page loads...
+// 1. Highlight a target item from the URL (browser address bar) if one is present.
+// 2. Setup all anchor tags with targets pointing to the current page to cause a fade on the target element when clicked.
+
+// This is the amount of time (in milliseconds) that will lapse between each step in the fade
+var FadeInterval = 75;
+
+// This is where the fade will start, if you want it to be faster and start with a lighter color, make this number smaller
+// It corresponds directly to the FadeSteps below
+var StartFadeAt = 25;
+
+// This is list of steps that will be used for the color to fade out
+var FadeSteps = new Array();
+	FadeSteps[1] = "ff";
+	FadeSteps[2] = "ee";
+	FadeSteps[3] = "dd";
+	FadeSteps[4] = "cc";
+	FadeSteps[5] = "bb";
+	FadeSteps[6] = "aa";
+	FadeSteps[7] = "99";
+  // FadeSteps[8] = "99";
+  // FadeSteps[9] = "aa";
+  // FadeSteps[10] = "bb";
+  // FadeSteps[11] = "cc";
+  // FadeSteps[12] = "dd";
+  // FadeSteps[13] = "ee";
+  // FadeSteps[14] = "ee";
+  // FadeSteps[15] = "ee";
+  // FadeSteps[16] = "ee";
+  // FadeSteps[17] = "dd";
+  // FadeSteps[18] = "cc";
+  // FadeSteps[19] = "bb";
+  // FadeSteps[20] = "aa";
+	FadeSteps[21] = "99";
+	FadeSteps[22] = "99";
+	FadeSteps[23] = "aa";
+	FadeSteps[24] = "bb";
+	FadeSteps[25] = "cc";
+	FadeSteps[26] = "dd";
+	FadeSteps[27] = "ee";
+	FadeSteps[28] = "ff";
+
+// These are the lines that "connect" the script to the page.
+var W3CDOM = (document.createElement && document.getElementsByTagName);
+addEvent(window, 'load', initFades);
+
+// This function automatically connects the script to the page so that you do not need any inline script
+// See http://www.scottandrew.com/weblog/articles/cbs-events for more information
+function addEvent(obj, eventType,fn, useCapture)
+{
+	if (obj.addEventListener) {
+		obj.addEventListener(eventType, fn, useCapture);
+		return true;
+	} else {
+		if (obj.attachEvent) {
+			var r = obj.attachEvent("on"+eventType, fn);
+			return r;
+		}
+	}
+}
+
+// The function that initializes the fade and hooks the script into the page
+function initFades()
+{
+	if (!W3CDOM) return;
+
+// This section highlights targets from the URL (browser address bar)
+
+    // Get the URL
+    var currentURL = unescape(window.location);
+    // If there is a '#' in the URL
+    if (currentURL.indexOf('#')>-1) 
+        // Highlight the target
+        DoFade(StartFadeAt, currentURL.substring(currentURL.indexOf('#')+1,currentURL.length));
+
+
+// This section searches the page body for anchors and adds onclick events so that their targets get highlighted
+
+    // Get the list of all anchors in the body
+    var anchors = document.body.getElementsByTagName('a');
+
+    // For each of those anchors
+    for (var i=0;i<anchors.length;i++)
+
+        // If there is a '#' in the anchors href
+        if (anchors[i].href.indexOf('#')>-1)
+
+            // Add an onclick event that calls the highlight function for the target
+            anchors[i].onclick = function(){Highlight(this.href);return true};
+}
+
+// This function is just a small wrapper to use for the oncick events of the anchors
+function Highlight(target) {
+
+	// Get the target ID from the string that was passed to the function
+    var targetId = target.substring(target.indexOf('#')+1,target.length);
+    DoFade(StartFadeAt, targetId);
+}
+
+// This is the recursive function call that actually performs the fade
+function DoFade(colorId, targetId) {
+    if (colorId >= 1) {
+		var target = document.getElementById(targetId);
+		if (target) {
+			target.style.backgroundColor = "#ffff" + FadeSteps[colorId];
+
+			// If it's the last color, set it to transparent
+			if (colorId==1) {
+				 document.getElementById(targetId).style.backgroundColor = "transparent";
+		 }
+			colorId--;
+
+			// Wait a little bit and fade another shade
+			setTimeout("DoFade("+colorId+",'"+targetId+"')", FadeInterval);
+		}
+	}
+}
+
+</script>
+
+
+<!-- custom page css -->
+<style type="text/css" media="screen">
+h2 {cursor:pointer;}
+#content h2 a {text-decoration:none !important;}
+h2.darkheadings a {color:#000 !important;}
+h2.nomargin {margin:0 0 1em;}
+div.toggleanything {margin-bottom:2.5em; /*border-left:5px solid #eee;*/ padding-left:1em;}
+img {border:0;}
+a.toggleLink {font-size:0.8em;}
+.showAll, .hideAll {cursor:pointer;}
+h1 a, .showhidecategories a {color:#360 !important;}
+</style>
+
+<noscript>
+<style type="text/css" media="screen">
+	.showhidecategories {display:none;}
+</style>
+</noscript>
+
+
+
+	<script type="text/javascript" src="../index.php%3Fjs=upm_image"></script>
+</head>
+
+<body id="archives">
+
+<a id="top" name="top"></a>
+<div id="accessibility">
+<p><a href="index.html#content" title="Jump to content.">Jump to content</a>, <a href="index.html#sidebar" title="Jump to navigation.">Jump to navigation</a>.</p>
+</div>
+<p class="bread"><a href="/">Amber Paulen</a></p>
+<div id="page">
+
+<div id="header">
+<p id="logo"><a href="../reading.1.html" title="Descriptedlines homepage.">Descriptedlines</a></p>
+<ul id="navigation">
+<li><a class="nav-about" href="../about/index.html" title="About the author.">About</a></li>
+<li><a class="nav-contact" href="../contact/index.html" title="Correspond with the author.">Correspond</a></li>
+<li><a class="nav-archives" href="../archives/index.html" title="Browse past writings.">Browse Archives</a></li>
+<!--<li><a class="nav-goodbooks" href="/goodbooks/" title="Writings about good books listed by author.">Good Books by Author</a></li>
+<li><a class="nav-fiction-other-writings" href="/fiction-other-writings/" title="My fiction and other writings.">Fiction &amp; Other Writings</a></li>-->
+</ul>
+</div>
+
+<div id="content">
+
+<h1><a href="../archives/index.html" title="Back to archives main page.">Archives</a> / Categories</h1>
+
+<p class="floatright showhidecategories small"><a class="showAll">Show All</a><br /><a class="hideAll">Hide All</a></p>
+
+
+  
+  <h2 class="nomargin"><a href="index.html#Fiction-esque">Fiction/esque</a></h2>
+<div class="toggleanything" id="Fiction-esque">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../the-spinster-of-atrani-on-front-porch-journal.html">The Spinster of Atrani on Front Porch Journal</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../two-sides-to-a-story.html">Two Sides to a Story</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sunday-church.html">Sunday Church</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../to-lago-albano.html">To Lago Albano</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../chinese-lanterns.html">Chinese Lanterns</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../how-sonia-slept.html">How Sonia Slept</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../bread.html">Bread</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../valerie-and-arianna-talk.html">Valerie and Arianna Talk</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-desert-nomad.html">The Desert Nomad</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../eid-ul-adha.html">Eid-ul Adha</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ephemera/to-do-the-hay.html">To Do the Hay</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../tree-with-its-life-in-the-air.html">Tree with its Life in the Air</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../brittany-1111.html">Brittany #1111</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../brittany-1.html">Brittany #1</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-train.html">The Train</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../insideoutside-cat.html">Inside/Outside Cat</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-firsts.html">The Firsts</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../fools.html">fools!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../blood-and-guts.html">Blood and Guts</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../klaus.html">Klaus</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../arianna.html">Arianna</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../isaac.html">Isaac</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sex.html">SEX</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../reflections.html">Reflections</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-children-a-fairy-tale-of-sorts.html">The Children (a fairy tale of sorts)</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../_the-bodys-long-madness_-page-304-to-306.html">On a Bench</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../behold-the-pantheon.html">Behold! A Pantheon!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../cat-barn.html">Cat Barn</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../mangi.html">Mangi!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../valerie-walks-the-streets-of-rome.html">Valerie Walks the Streets of Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-life-of-a-pearl.html">The Life of a Pearl</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../life-a-true-story.html">Life (a true story)</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ephemera/how-do-you-close-a-book.html">How Do You Close a Book?</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../frustration.html">An Invokation of Former Frustration</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../written-from-rome.html">Written from Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-unearthed-and-revived.html">The Unearthed and Revived</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../fiction/of-death-and-the-garden.html">Of Death and the Garden</a> 
+  	</li>
+</ul>
+</div>
+  <br />
+  <h2 class="nomargin"><a href="index.html#italy-and-rome">Italy and Rome</a></h2>
+<div class="toggleanything" id="italy-and-rome">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../rome-shame-on-you.html">Rome, Shame on You!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../bountiful-Friday.html">Bountiful Friday</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../signs-of-spring.html">Signs of Spring</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-san-calisto-rome.html">The San Calisto, Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../thoughts-on-the-women-s-fiction-festival-and-matera.html">Thoughts on the Women&#39;s Fiction Festival and Matera</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../eataly-in-rome-on-a-sunday.html">Eataly in Rome on a Sunday</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../best-in-rome-li-rioni.html">Best in Rome: Li Rioni</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../best-in-rome-grapes.html">Best in Rome: Grapes</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../best-in-rome-plums.html">Best in Rome: Plums</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../favorite-park-in-rome-villa-celimontana.html">Favorite Park in Rome: Villa Celimontana</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../weekend-in-naples.html">Weekend in Naples</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../next-best-english-bookshop-in-rome-anglo-american-book.html">Next Best English Bookshop in Rome: Anglo American Book</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../rome-s-best-english-bookshop-open-door-bookshop.html">Rome&#39;s Best English Bookshop: Open Door Bookshop</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../two-sides-to-a-story.html">Two Sides to a Story</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../daisy-miller.html">Daisy Miller</a> <em class="bookauthorarchives small quiet">Henry James</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../eating-italy-food-tour-in-rome.html">Eating Italy Food Tour in Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ma-dai.html">Ma Dai!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-nun.html">The Nun</a> <em class="bookauthorarchives small quiet">Simonetta Agnello Hornby</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../happy-friday.html">Happy Friday</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../rome-snow.html">Rome + Snow</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../stories-from-the-city-of-god.html">Stories From the City of God </a> <em class="bookauthorarchives small quiet">Pier Paolo Pasolini</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-real-rome.html">The Real Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../steve-mccurry-in-rome.html">Steve McCurry in Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-greed-and-the-vatican-museum.html">On Greed and the Vatican Museum</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../book-list-books-set-in-rome.html">Book List: Books Set in Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../cruise-ship-down-giglio.html">Cruise Ship Down, Giglio</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../aspetti.html">Aspetti!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-roman-spring-of-mrs-stone.html">The Roman Spring of Mrs. Stone </a> <em class="bookauthorarchives small quiet">Tennessee Williams</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../piet-mondrian-in-rome.html">Piet Mondrian in Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../rome-s-riots.html">Rome&#39;s Riots</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-italian-stomach.html">The Italian Stomach</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../isola-del-giglio.html">Isola del Giglio</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../augustus.html">Augustus</a> <em class="bookauthorarchives small quiet">John Williams</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../rome-writing-group.html">Rome Writing Group</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-twelve-caesars.html">The Twelve Caesars</a> <em class="bookauthorarchives small quiet">Suetonius</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../i-claudius.html">I, Claudius</a> <em class="bookauthorarchives small quiet">Robert Graves</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../rama-app-tours-of-rome.html">Rama App Tours of Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../colosseum-as-traffic-circle.html">Colosseum as Traffic Circle</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ad-bestias.html">Ad Bestias</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../shrimp-for-lunch.html">Shrimp for Lunch</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../weekend-in-florence.html">Weekend in Florence</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../memoirs-of-hadrian-x-2.html">Memoirs of Hadrian x 2</a> <em class="bookauthorarchives small quiet">Marguerite Yourcenar</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../two-exhibitions.html">Two Exhibitions</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-day-in-the-life-of-ancient-rome.html">A Day in the Life of Ancient Rome</a> <em class="bookauthorarchives small quiet">Alberto Angela</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-vittoriano.html">The Vittoriano</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../seeing-rome.html">Seeing Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../italian-journey.html">Italian Journey</a> <em class="bookauthorarchives small quiet">Johann Wolfgang von Goethe</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../fascist-rome.html">Fascist Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../roman-literati.html">Roman Literati</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../van-gogh-in-rome.html">Van Gogh in Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../in-rome-in-november.html">In Rome, In November</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../not-cold.html">Not Cold</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../at-san-giovanni.html">At San Giovanni</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ferie-a-roma.html">Ferie a Roma</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../to-lago-albano.html">To Lago Albano</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../san-clemente.html">San Clemente</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sky-and-sea.html">Sky and Sea</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../city-country.html">City/Country</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../rome.html">Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../back-to-formello.html">Back to Formello</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../formello.html">Formello</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ciao-bracciano-ciao.html">Ciao Bracciano, Ciao!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../summer-fall.html">Summer/Fall</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../down-to-the-lake.html">Down to the Lake</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../memoirs-of-hadrian.html">Memoirs of Hadrian</a> <em class="bookauthorarchives small quiet">Marguerite Yourcenar</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ephemera/bracciano-a-portrait.html">Bracciano, a Portrait</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../mangi.html">Mangi!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../valerie-walks-the-streets-of-rome.html">Valerie Walks the Streets of Rome</a> 
+  	</li>
+</ul>
+</div>
+  <br />
+  <h2 class="nomargin"><a href="index.html#misfits">Misfits</a></h2>
+<div class="toggleanything" id="misfits">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../pause.html">Pause</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../rhubarb-crisp.html">Rhubarb Crisp</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sometimes-i-cook.html">Sometimes I Cook</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../why-vonnegut-used-a-typewriter.html">Why Vonnegut Used a Typewriter</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../zzzzzz.html">Zzzzzz.....</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../tribal-violence.html">Tribal Violence</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../i-don-t-know-anything.html">I Don&#39;t Know Anything</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../nubifragio.html">Nubifragio</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../experiment-lamb.html">Experiment + Lamb</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../lately.html">Lately</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-thought-with-photos.html">A Thought with Photos</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../wake-up.html">Wake Up</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../around-my-desk.html">Around My Desk</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../exciting.html">Exciting</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-short-trip.html">A Short Trip</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../open.html">Open</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../an-opera.html">An Opera</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../gone-swimming.html">Gone Swimming</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../so-we-go.html">So We Go</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../cooking.html">Cooking</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../letter-from-another-lettera.html">Letter from Another Lettera</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../speechless.html">Speechless</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../no-mere-idea.html">No Mere Idea</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../miscellanea.html">Miscellanea</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../writer-for-hire.html">Writer for Hire</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../happy-birthday.html">Happy Birthday!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../spring-cleaning.html">Spring Cleaning</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-rant.html">A Rant.</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ephemera/internet-no-2.html">Internet no.2</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-internet.html">The Internet</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../lost-knowledge.html">Lost Knowledge</a> 
+  	</li>
+</ul>
+</div>
+  <br />
+  <h2 class="nomargin"><a href="index.html#my-life-illusion">My Life-Illusion</a></h2>
+<div class="toggleanything" id="my-life-illusion">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../change-coming.html">Change Coming</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../stuff-part-i.html">Stuff, Part I</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../going-going.html">Going, Going</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../cats-at-sleep.html">Cats at Sleep</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../begin-end.html">Begin/End</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-doldrums.html">The Doldrums</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-sadism-and-the-us-government.html">On Sadism and the US Government</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../signs-of-spring.html">Signs of Spring</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../spring-rejection-and-levin.html">Spring, Rejection and Levin</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../paesaggio-interiore.html">Paesaggio Interiore</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../cosmos-and-decisions.html">Cosmos and Decisions</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../risk-it.html">Risk It</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../slowing-down.html">Slowing Down</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../cultivate-friendships.html">Cultivate Friendships</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../some-things-don-t-change.html">Some Things Don&#39;t Change</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../rome-s-riots.html">Rome&#39;s Riots</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-weather.html">The Weather</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../us-as-re-fuel.html">U.S. as Re-Fuel</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../monday-to-friday.html">Monday to Friday</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../in-the-mountains.html">In the Mountains</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../art-selling-out.html">Art/Selling Out</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-opposite-direction.html">The Opposite Direction</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sfumato.html">Sfumato</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-chain-linked.html">A Chain Linked</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sunday-church.html">Sunday Church</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../at-san-giovanni.html">At San Giovanni</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../i-am-henry-miller-and-annie-dillards-love-child.html">I Am Henry Miller and Annie Dillard&#39;s Love Child</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-turning-30.html">On Turning 30</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../city-country.html">City/Country</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-rocking-boat.html">A Rocking Boat</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../camping-trip.html">Camping Trip</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../in-michigan.html">In Michigan</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../new-neighbors.html">New Neighbors</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../relevant.html">Relevant</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ballast-overboard.html">Ballast Overboard</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-process.html">The Process</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-fig-tree.html">A Fig Tree</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../to-venus.html">To Venus</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../cruelty.html">Cruelty</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../stuck-in-time.html">Stuck in Time</a> 
+  	</li>
+</ul>
+</div>
+  <br />
+  <h2 class="nomargin"><a href="index.html#places-and-travelling">Places and Travelling</a></h2>
+<div class="toggleanything" id="places-and-travelling">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../henry-miller-s-house.html">Henry Miller&#39;s House</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../word-photos-from-fez-morocco.html">(Word) Photos from Fez, Morocco</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../my-best-in-florence.html">My Best in Florence</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../oblate-library-florence.html">Oblate Library, Florence</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../conversations-in-amsterdam.html">Conversations in Amsterdam</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../me-and-anais-nin-in-louveciennes.html">Me and Anaïs Nin in Louveciennes</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../paris-literary-checklist.html">Paris Literary Checklist</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../perugia-one-night.html">Perugia, One Night</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../christmas-and-kundera-in-prague.html">Christmas and Kundera in Prague</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../mountain-watching.html">Mountain Watching</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../stay-home.html">Stay Home!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../6-days-in-belgium.html">6 Days in Belgium</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../cow-town-cafe-howard-city-mi.html">Cow Town Cafe, Howard City, MI</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../isola-del-giglio.html">Isola del Giglio</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../michigan-album.html">Michigan Album</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../in-the-mountains.html">In the Mountains</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-opposite-direction.html">The Opposite Direction</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../thailand-last-year.html">Thailand, Last Year</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-trip-to-malta.html">A Trip to Malta</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../returning.html">Returning</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../back-to-formello.html">Back to Formello</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../back-to-bangkok.html">Back to Bangkok</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../vietnam-south-to-north.html">Vietnam, South to North</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../camping-trip.html">Camping Trip</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../island-hopping.html">Island Hopping</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../john-cowper-powys-in-ko-phayam.html">John Cowper Powys in Ko Phayam</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../from-a-hammock.html">From a Hammock</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../under-chiang-mai-s-skin.html">Under Chiang Mai&#39;s Skin</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-being-a-tourist-in-bangkok.html">On Being a Tourist in Bangkok</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../departure-imminent.html">Departure Imminent</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../preparations.html">Preparations</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../in-michigan.html">In Michigan</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../two-trips.html">Two Trips</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-fig-tree.html">A Fig Tree</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../black-curse.html">Black Curse</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-kind-of-list.html">A Kind of List</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../flying.html">Flying</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../stand-behind-the-line.html">Stand Behind the Line</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../missing-home.html">Missing Home</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-1st-of-november.html">The 1st of November</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../mediterranean-airs.html"> Mediterranean Airs</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../thoughts-on-transitions.html">Thoughts on Transitions</a> 
+  	</li>
+</ul>
+</div>
+  <br />
+  <h2 class="nomargin"><a href="index.html#Reading-Notes">Reading Notes</a></h2>
+<div class="toggleanything" id="Reading-Notes">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../here-is-new-york.html">Here Is New York</a> <em class="bookauthorarchives small quiet">E.B. White</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../goodbye-to-all-that.html">Goodbye to All That</a> <em class="bookauthorarchives small quiet">Joan Didion</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-handmaid-s-tale.html">The Handmaid&#39;s Tale</a> <em class="bookauthorarchives small quiet">Margaret Atwood</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../christ-stopped-at-eboli.html">Christ Stopped at Eboli</a> <em class="bookauthorarchives small quiet">Carlo Levi</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../kafka-on-the-shore.html">Kafka on the Shore</a> <em class="bookauthorarchives small quiet">Haruki Murakami</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-other-language.html">The Other Language</a> <em class="bookauthorarchives small quiet">Francesca Marciano</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-flamethrowers.html">The Flamethrowers</a> <em class="bookauthorarchives small quiet">Rachel Kushner</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-lowland.html">The Lowland</a> <em class="bookauthorarchives small quiet">Jhumpa Lahiri</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-book-on-style-exercises-in-style.html">A Book on Style: Exercises in Style</a> <em class="bookauthorarchives small quiet">Raymond Queneau</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../why-be-happy-when-you-could-be-normal.html">Why Be Happy When You Could Be Normal?</a> <em class="bookauthorarchives small quiet">Jeanette Winterson</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../max-perkins.html">Max Perkins</a> <em class="bookauthorarchives small quiet">A. Scott Berg</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../arcadia.html">Arcadia</a> <em class="bookauthorarchives small quiet">Lauren Groff</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../telegraph-avenue.html">Telegraph Avenue</a> <em class="bookauthorarchives small quiet">Michael Chabon</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../christmas-and-kundera-in-prague.html">Christmas and Kundera in Prague</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-heart-is-a-lonely-hunter.html">The Heart Is a Lonely Hunter</a> <em class="bookauthorarchives small quiet">Carson McCullers</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../stoner.html">Stoner</a> <em class="bookauthorarchives small quiet">John Williams</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../hygiene-and-the-assassin.html">Hygiene and the Assassin</a> <em class="bookauthorarchives small quiet">Amélie Nothomb</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-imperfectionists.html">The Imperfectionists</a> <em class="bookauthorarchives small quiet">Tom Rachman</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../jane-eyre.html">Jane Eyre</a> <em class="bookauthorarchives small quiet">Charolotte Brontë</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-marquise-of-o.html">The Marquise of O–</a> <em class="bookauthorarchives small quiet">Heinrich von Kleist</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../when-we-were-romans.html">When We Were Romans</a> <em class="bookauthorarchives small quiet">Matthew Kneale</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-brief-wondrous-life-of-oscar-wao.html">The Brief Wondrous Life of Oscar Wao </a> <em class="bookauthorarchives small quiet">Junot Díaz</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../orlando.html">Orlando</a> <em class="bookauthorarchives small quiet">Virginia Woolf</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../reading-like-a-writer.html">Reading Like a Writer</a> <em class="bookauthorarchives small quiet">Francine Prose</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-room-with-a-view.html">A Room with a View</a> <em class="bookauthorarchives small quiet">E.M. Forster</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../couples.html">Couples</a> <em class="bookauthorarchives small quiet">John Updike</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../daisy-miller.html">Daisy Miller</a> <em class="bookauthorarchives small quiet">Henry James</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-awakening.html">The Awakening</a> <em class="bookauthorarchives small quiet">Kate Chopin</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../madame-bovary-x-2.html">Madame Bovary x 2</a> <em class="bookauthorarchives small quiet">Gustave Flaubert</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-nun.html">The Nun</a> <em class="bookauthorarchives small quiet">Simonetta Agnello Hornby</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../note-1-the-art-of-fiction.html">Note #1: The Art of Fiction </a> <em class="bookauthorarchives small quiet">John Gardner</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-marriage-plot.html">The Marriage Plot</a> <em class="bookauthorarchives small quiet">Jeffrey Eugenides</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../stories-from-the-city-of-god.html">Stories From the City of God </a> <em class="bookauthorarchives small quiet">Pier Paolo Pasolini</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-wapshot-chronicle.html">The Wapshot Chronicle</a> <em class="bookauthorarchives small quiet">John Cheever</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../book-list-books-set-in-rome.html">Book List: Books Set in Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-farewell-to-arms.html">A Farewell to Arms</a> <em class="bookauthorarchives small quiet">Ernest Hemingway</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../cheever.html">Cheever</a> <em class="bookauthorarchives small quiet">Blake Bailey</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-roman-spring-of-mrs-stone.html">The Roman Spring of Mrs. Stone </a> <em class="bookauthorarchives small quiet">Tennessee Williams</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-beauty.html">On Beauty</a> <em class="bookauthorarchives small quiet">Zadie Smith</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../those-without-shadows.html">Those Without Shadows </a> <em class="bookauthorarchives small quiet">Françoise Sagan</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../suite-francaise.html">Suite Française</a> <em class="bookauthorarchives small quiet">Irène Némirovsky</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../memoirs-of-a-dutiful-daughter.html">Memoirs of a Dutiful Daughter</a> <em class="bookauthorarchives small quiet">Simone de Beauvoir</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-beggar-maid.html">The Beggar Maid</a> <em class="bookauthorarchives small quiet">Alice Munro</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../embassytown.html">Embassytown</a> <em class="bookauthorarchives small quiet">China Miéville</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-story-of-art.html">The Story of Art</a> <em class="bookauthorarchives small quiet">E.H. Gombrich</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-kind-of-intimacy.html">A Kind of Intimacy</a> <em class="bookauthorarchives small quiet">Jenn Ashworth</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-infernal-desire-machines-of-doctor-hoffman.html">The Infernal Desire Machines of Doctor Hoffman</a> <em class="bookauthorarchives small quiet">Angela Carter</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-wind-up-bird-chronicle.html">The Wind-Up Bird Chronicle</a> <em class="bookauthorarchives small quiet">Haruki Murakami</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-progress-of-love.html">The Progress of Love</a> <em class="bookauthorarchives small quiet">Alice Munro</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../star-maker.html">Star Maker</a> <em class="bookauthorarchives small quiet">Olaf Stapledon</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../woman-on-the-edge-of-time.html">Woman on the Edge of Time</a> <em class="bookauthorarchives small quiet">Marge Piercy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-air-conditioned-nightmare.html">The Air-Conditioned Nightmare</a> <em class="bookauthorarchives small quiet">Henry Miller</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../in-a-strange-room.html">In a Strange Room</a> <em class="bookauthorarchives small quiet">Damon Galgut</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../all-the-living.html">All the Living</a> <em class="bookauthorarchives small quiet">C. E. Morgan</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sleeping-with-cats.html">Sleeping with Cats</a> <em class="bookauthorarchives small quiet">Marge Piercy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../bastard-out-of-carolina.html">Bastard Out of Carolina</a> <em class="bookauthorarchives small quiet">Dorothy Allison</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../augustus.html">Augustus</a> <em class="bookauthorarchives small quiet">John Williams</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-visit-from-the-goon-squad.html">A Visit From the Goon Squad</a> <em class="bookauthorarchives small quiet">Jennifer Egan</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-twelve-caesars.html">The Twelve Caesars</a> <em class="bookauthorarchives small quiet">Suetonius</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../i-claudius.html">I, Claudius</a> <em class="bookauthorarchives small quiet">Robert Graves</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../four-short-novels.html">Four Short Novels</a> <em class="bookauthorarchives small quiet">DH Lawrence</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../memoirs-of-hadrian-x-2.html">Memoirs of Hadrian x 2</a> <em class="bookauthorarchives small quiet">Marguerite Yourcenar</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-day-in-the-life-of-ancient-rome.html">A Day in the Life of Ancient Rome</a> <em class="bookauthorarchives small quiet">Alberto Angela</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../glimmer-train-77.html">Glimmer Train #77</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../italian-journey.html">Italian Journey</a> <em class="bookauthorarchives small quiet">Johann Wolfgang von Goethe</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-cosmic-connection.html">The Cosmic Connection</a> <em class="bookauthorarchives small quiet">Carl Sagan</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-canal.html">The Canal</a> <em class="bookauthorarchives small quiet">Lee Rourke</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-birds.html">The Birds</a> <em class="bookauthorarchives small quiet">Tarjei Vesaas</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../gogol.html">Gogol</a> <em class="bookauthorarchives small quiet">Vladimir Nabokov</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../wolf-solent-x-2.html">Wolf Solent x 2</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../tess-of-the-durbervilles.html">Tess of the D&#39;Urbervilles</a> <em class="bookauthorarchives small quiet">Thomas Hardy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../john-thomas-and-lady-jane.html">John Thomas and Lady Jane</a> <em class="bookauthorarchives small quiet">DH Lawrence</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-preparation-for-death.html">A Preparation for Death</a> <em class="bookauthorarchives small quiet">Greg Baxter</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../things-fall-apart.html">Things Fall Apart</a> <em class="bookauthorarchives small quiet">Chinua Achebe</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-first-lady-chatterley.html">The First Lady Chatterley</a> <em class="bookauthorarchives small quiet">DH Lawrence</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-propos-of-lady-chatterleys-lover.html">A Propos of &#39;Lady Chatterley&#39;s Lover&#39;</a> <em class="bookauthorarchives small quiet">DH Lawrence</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../lady-chatterleys-lover.html">Lady Chatterley&#39;s Lover</a> <em class="bookauthorarchives small quiet">DH Lawrence</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../our-cosmic-habitat.html">Our Cosmic Habitat</a> <em class="bookauthorarchives small quiet">Martin Rees</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../roadside-picnic.html">Roadside Picnic</a> <em class="bookauthorarchives small quiet">Arkady &amp; Boris Strugatsky</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../that-awful-mess-on-the-via-merulana.html">That Awful Mess on the Via Merulana</a> <em class="bookauthorarchives small quiet">Carlo Emilio Gadda</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../war-and-peace-the-end.html">War and Peace, The End</a> <em class="bookauthorarchives small quiet">Leo Tolstoy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../war-and-peace-volume-3.html">War and Peace, Volume 3</a> <em class="bookauthorarchives small quiet">Leo Tolstoy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-maytrees-x-2.html">The Maytrees x 2</a> <em class="bookauthorarchives small quiet">Annie Dillard</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../war-and-peace-volume-two.html">War and Peace, Volume Two</a> <em class="bookauthorarchives small quiet">Leo Tolstoy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-portrait.html">The Portrait</a> <em class="bookauthorarchives small quiet">Nikolai Gogol</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-ice-palace.html">The Ice Palace</a> <em class="bookauthorarchives small quiet">Tarjei Vesaas</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../war-and-peace-volume-one.html">War and Peace, Volume One</a> <em class="bookauthorarchives small quiet">Leo Tolstoy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../clash-of-civilizations-over-an-elevator-in-piazza-vittorio.html">Clash of Civilizations over an Elevator in Piazza Vittorio</a> <em class="bookauthorarchives small quiet">Amara Lakhous</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../weymouth-sands.html">Weymouth Sands</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../housekeeping.html">Housekeeping</a> <em class="bookauthorarchives small quiet">Marilynne Robinson</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../madame-bovary.html">Madame Bovary</a> <em class="bookauthorarchives small quiet">Gustave Flaubert</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-fifth-child.html">The Fifth Child</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../moravagine.html">Moravagine</a> <em class="bookauthorarchives small quiet">Blaise Cendrars</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../because-i-was-flesh.html">Because I Was Flesh</a> <em class="bookauthorarchives small quiet">Edward Dahlberg</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../morwyn.html">Morwyn</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-master-and-margarita.html">The Master and Margarita</a> <em class="bookauthorarchives small quiet">Mikhail Bulgakov</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-insurgent.html">The Insurgent</a> <em class="bookauthorarchives small quiet">Noah Cicero</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../resurrection.html">Resurrection</a> <em class="bookauthorarchives small quiet">Leo Tolstoy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-maytrees.html">The Maytrees</a> <em class="bookauthorarchives small quiet">Annie Dillard</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-idiot.html">The Idiot</a> <em class="bookauthorarchives small quiet">Fyodor Dostoevsky</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-proof-of-the-honey.html">The Proof of the Honey</a> <em class="bookauthorarchives small quiet">Salwa al Neimi</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../anna-karenina.html">Anna Karenina</a> <em class="bookauthorarchives small quiet">Leo Tolstoy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../anna-karenina-so-far.html">Anna Karenina, so far</a> <em class="bookauthorarchives small quiet">Leo Tolstoy</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-pure-and-the-impure.html">The Pure and the Impure</a> <em class="bookauthorarchives small quiet">Colette</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-summer-before-the-dark.html">The Summer Before the Dark</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../appetites.html">Appetites</a> <em class="bookauthorarchives small quiet">Caroline Knapp</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-year-of-magical-thinking.html">The Year of Magical Thinking</a> <em class="bookauthorarchives small quiet">Joan Didion</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-hour-of-the-star.html">The Hour of the Star</a> <em class="bookauthorarchives small quiet">Clarice Lispector</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../briefing-for-a-descent-into-hell.html">Briefing for a Descent into Hell</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../force-of-circumstance.html">Force of Circumstance</a> <em class="bookauthorarchives small quiet">Simone de Beauvoir</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-portrait-of-the-artist-as-a-young-man.html">A Portrait of the Artist as a Young Man</a> <em class="bookauthorarchives small quiet">James Joyce</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-books-in-my-life.html">The Books in My Life</a> <em class="bookauthorarchives small quiet">Henry Miller</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-sirian-experiments.html">The Sirian Experiments</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../letters-to-a-young-poet.html">Letters to a Young Poet</a> <em class="bookauthorarchives small quiet">Rainer Maria Rilke</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-glastonbury-romance.html">A Glastonbury Romance</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-glastonbury-romance-an-introduction.html">A Glastonbury Romance, an introduction</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../descents-of-memory.html">Descents of Memory</a> <em class="bookauthorarchives small quiet">Morine Krissdóttir</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-overcoat.html">The Overcoat</a> <em class="bookauthorarchives small quiet">Nikolai Gogol</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../reading/krishnamurti-the-years-of-awakening.html">Krishnamurti</a> <em class="bookauthorarchives small quiet">Mary Lutyens</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../delta-of-venus-erotica.html">Delta of Venus</a> <em class="bookauthorarchives small quiet">Anaïs Nin</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../autobiography.html">Autobiography</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../travels-with-charley.html">Travels with Charley</a> <em class="bookauthorarchives small quiet">John Steinbeck</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../winesburg-ohio.html">Winesburg, Ohio</a> <em class="bookauthorarchives small quiet">Sherwood Anderson</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-marriages-between-zones-three-four-and-five.html">The Marriages Between Zones Three, Four and Five</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../shikasta.html">Shikasta</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../pilgrim-on-tinker-creek.html">Pilgrim at Tinker Creek</a> <em class="bookauthorarchives small quiet">Annie Dillard</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../porius.html">Porius</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../porius-again.html">Porius, again</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../porius-so-far.html">Porius, so far</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../third-or-fourth-day-of-spring.html">Third or Fourth Day of Spring</a> <em class="bookauthorarchives small quiet">Henry Miller</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sexing-the-cherry.html">Sexing the Cherry</a> <em class="bookauthorarchives small quiet">Jeanette Winterson</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../wolf-solent.html">Wolf Solent</a> <em class="bookauthorarchives small quiet">John Cowper Powys</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-cats.html">On Cats</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../memoirs-of-hadrian.html">Memoirs of Hadrian</a> <em class="bookauthorarchives small quiet">Marguerite Yourcenar</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../landlocked.html">Landlocked</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../reading/the-brothers-karamazov.html">The Brothers Karamazov</a> <em class="bookauthorarchives small quiet">Fyodor Dostoevsky</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../plexus.html">Plexus</a> <em class="bookauthorarchives small quiet">Henry Miller</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sexus.html">Sexus</a> <em class="bookauthorarchives small quiet">Henry Miller</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../don-quixote.html">Don Quixote</a> <em class="bookauthorarchives small quiet">Miguel Cervantes</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../martha-quest.html">Martha Quest</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../blue-boy.html">Blue Boy</a> <em class="bookauthorarchives small quiet">Jean Giono</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-colossus-of-maroussi.html">The Colossus of Maroussi</a> <em class="bookauthorarchives small quiet">Henry Miller</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../death-on-the-installment-plan.html">Death on the Installment Plan</a> <em class="bookauthorarchives small quiet">Louis-Ferdinand Céline</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../east-of-eden.html">East of Eden vs. The Grapes of Wrath</a> <em class="bookauthorarchives small quiet">John Steinbeck</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-grass-is-singing.html">The Grass is Singing</a> <em class="bookauthorarchives small quiet">Doris Lessing</em>
+  	</li>
+</ul>
+</div>
+  <br />
+  <h2 class="nomargin"><a href="index.html#starwatch">Starwatch</a></h2>
+<div class="toggleanything" id="starwatch">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../embassytown.html">Embassytown</a> <em class="bookauthorarchives small quiet">China Miéville</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../star-maker.html">Star Maker</a> <em class="bookauthorarchives small quiet">Olaf Stapledon</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-cosmic-connection.html">The Cosmic Connection</a> <em class="bookauthorarchives small quiet">Carl Sagan</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../our-cosmic-habitat.html">Our Cosmic Habitat</a> <em class="bookauthorarchives small quiet">Martin Rees</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../stardust.html">Stardust</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sky-and-sea.html">Sky and Sea</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sun-is-star.html">Sun is Star</a> 
+  	</li>
+</ul>
+</div>
+  <br />
+  <h2 class="nomargin"><a href="index.html#womanly">Womanly</a></h2>
+<div class="toggleanything" id="womanly">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../the-awakening.html">The Awakening</a> <em class="bookauthorarchives small quiet">Kate Chopin</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../henry-miller-madame-bovary-and-women.html">Henry Miller, Madame Bovary and Women</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../some-talented-women.html">Some Talented Women</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../tori-amos-disintegration.html">Tori Amos: Disintegration</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../relevant.html">Relevant</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sex-in-italy.html">Sex in Italy</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../free-shots.html">Free Shots</a> 
+  	</li>
+</ul>
+</div>
+  <br />
+  <h2 class="nomargin"><a href="index.html#writing-on-readings">Writing on Readings</a></h2>
+<div class="toggleanything" id="writing-on-readings">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../change-coming.html">Change Coming</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../darkness-and-light-in-dh-lawrence.html">Darkness and Light in DH Lawrence</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../waiting-and-dh-lawrence-s-sentences.html">Waiting and D.H. Lawrence&#39;s Sentences</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../dostoevsky-s-madnesses.html">Dostoevsky&#39;s Madnesses</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../vronsky-s-toothache.html">Vronsky&#39;s Toothache</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-pleasure-of-reading-old-books.html">The Pleasure of Reading Old Books</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../year-in-books-2013.html">Year in Books, 2013</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../why-write-by-george-orwell.html">Why Write? by George Orwell</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../people-who-read-are-not-too-lazy.html">People Who Read Are Not Too Lazy</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../reading-out-of-genre.html">Reading Out of Genre</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../two-mgs-martha-gellhorn-mavis-gallant.html">Two M.G.s: Martha Gellhorn &amp; Mavis Gallant</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../summer-book-lists.html">Summer Book Lists</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../jhumpa-lahiri-conversations-reading-in-rome.html">Jhumpa Lahiri: Conversations (&amp; Reading) in Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../good-and-bad-in-the-marble-faun.html">Good and Bad in The Marble Faun</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../in-praise-of-reading-and-fiction.html">In Praise of Reading and Fiction</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../top-five-reads-of-2012.html">Top Five Reads of 2012</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-composition.html">On Composition</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../poetry-reading-robert-hass.html">Poetry Reading: Robert Hass</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../slow-reading.html">Slow Reading </a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../favorite-park-in-rome-villa-celimontana.html">Favorite Park in Rome: Villa Celimontana</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../henry-miller-madame-bovary-and-women.html">Henry Miller, Madame Bovary and Women</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-real-rome.html">The Real Rome</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../library-book.html">Library Book</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../my-year-in-reading-2011.html">My Year in Reading, 2011 </a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../still-reading-john-cheever.html">Still Reading John Cheever</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../reading-john-cheever.html">Reading John Cheever</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-melancholic-quote.html">A Melancholic Quote</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../literary-fireworks.html">Literary Fireworks</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../simone-s-seriousness.html">Simone&#39;s Seriousness</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../us-as-re-fuel.html">U.S. as Re-Fuel</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-conversation-with-dorothy-allison.html">A Conversation with Dorothy Allison</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../fiction-reading-dorothy-allison.html">Fiction Reading: Dorothy Allison</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../poetry-reading-joseph-harrison.html">Poetry Reading: Joseph Harrison</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../from-suetonius-to-egan.html">From Suetonius to Egan</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../monstrous.html">Monstrous</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-influence-and-imitation.html">On Influence and Imitation</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../development-of-a-sentence.html">Development of a Sentence</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../oliver-mellors-and-isolation.html">Oliver Mellors and Isolation</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../stardust.html">Stardust</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../i-am-henry-miller-and-annie-dillards-love-child.html">I Am Henry Miller and Annie Dillard&#39;s Love Child</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../conversations-with-henry-miller.html">Conversations with Henry Miller</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../john-cowper-powys-in-ko-phayam.html">John Cowper Powys in Ko Phayam</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../superstition.html">Superstition</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-inhumanity.html">On Inhumanity</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../reading-russian-in-english.html">Reading Russian in English</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-book-to-change-me.html">A Book to Change Me</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../funny-story.html">Funny Story</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../review-on-demand.html">Review on Demand</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../in-times-of-shortage.html">In Times of Shortage</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-part-of-the-magician.html">The Part of the Magician</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-thought.html">On Thought</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../autobiography-lf.html">Autobiography</a> <em class="bookauthorarchives small quiet">Lawrence Ferlinghetti</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../obsession-and-awe.html">Obsession and Awe</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-the-necessity-of-the-story.html">On the Necessity of the Story</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../henry-miller-and-the-life-abundant.html">Henry Miller and the Life Abundant</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../reading/fantastical-roald-dahl.html">Fantastical Roald Dahl</a> 
+  	</li>
+</ul>
+</div>
+  <br />
+  <h2 class="nomargin"><a href="index.html#writing-on-writing">Writing on Writing</a></h2>
+<div class="toggleanything" id="writing-on-writing">  
+	<ul>
+	<li>
+  	<a rel="bookmark" href="../waiting-and-dh-lawrence-s-sentences.html">Waiting and D.H. Lawrence&#39;s Sentences</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../doris-lessing-on-writing.html">Doris Lessing on Writing</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../i-believe-in-language.html">I Believe in Language</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../spring-rejection-and-levin.html">Spring, Rejection and Levin</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../henry-miller-s-11-commandments-of-writing.html">Henry Miller&#39;s 11 Commandments of Writing</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../tips-for-writing-personal-essays.html">Tips for Writing Personal Essays</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../why-write-by-george-orwell.html">Why Write? by George Orwell</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../people-who-read-are-not-too-lazy.html">People Who Read Are Not Too Lazy</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../why-write-by-mavis-gallant.html">Why Write? by Mavis Gallant</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-book-on-style-exercises-in-style.html">A Book on Style: Exercises in Style</a> <em class="bookauthorarchives small quiet">Raymond Queneau</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../thoughts-on-the-women-s-fiction-festival-and-matera.html">Thoughts on the Women&#39;s Fiction Festival and Matera</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../more-from-in-praise-of-reading-and-fiction.html">More from In Praise of Reading and Fiction</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-macro-edit.html">The Macro-Edit</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../six-questions-to-ask-your-sentences-by-george-orwell.html">Six Questions to Ask Your Sentences by George Orwell</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../editing-and-writing.html">Editing and Writing</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../creative-writing.html">Creative Writing</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../novelling.html">Novelling</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../writers-too-must-eat.html">Writers, Too, Must Eat</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../e-b-white-on-style.html">E. B. White on Style</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../usage-note-flammable.html">Usage Note: Flammable</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../more-sentences.html">More Sentences</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../some-thoughts-on-sentences.html">Some Thoughts on Sentences</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../poetry-conversation-billy-collins.html">Poetry Conversation: Billy Collins</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../note-1-the-art-of-fiction.html">Note #1: The Art of Fiction </a> <em class="bookauthorarchives small quiet">John Gardner</em>
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../temptation-weight.html">Temptation + Weight</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../fumbling.html">Fumbling</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../something-ingrown.html">Something Ingrown</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../10-things-i-learned-about-writing-from-the-culture-show-s-new-novelists-episode.html">10 Things I Learned about Writing from the Culture Show&#39;s New Novelists Episode</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../limiting.html">Limiting</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../polishing.html">Polishing</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-heat-wave-is-over.html">The Heat Wave is Over</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../rome-writing-group.html">Rome Writing Group</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-beginning-a-story.html">The Beginning, A Story</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../roman-literati.html">Roman Literati</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-influence-and-imitation.html">On Influence and Imitation</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../crest-of-a-wave.html">Crest of a Wave</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../moving-along.html">Moving Along</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../doubt.html">Doubt</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-rocking-boat.html">A Rocking Boat</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../superstition.html">Superstition</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-process.html">The Process</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../a-mano.html">A Mano</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../this-is-not-a-book.html">This is Not a Book!</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../sketchy-surroundings.html">Sketchy Surroundings</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../good-waste-bad-waste.html">Good Waste, Bad Waste</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../una-forchetta.html">Una Forchetta</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../ephemera/ode-to-type-writer.html">Ode to Type-writer</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-book.html">The Book</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../on-the-necessity-of-the-story.html">On the Necessity of the Story</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../the-meaning-of-meaning.html">The Meaning of Meaning</a> 
+  	</li>
+	<li>
+  	<a rel="bookmark" href="../frustration.html">An Invokation of Former Frustration</a> 
+  	</li>
+</ul>
+</div>
+  
+
+</div> <!-- content end -->
+
+<div id="footer"><p>Copyright 2000–2016 by Amber Ruth Paulen. All rights reserved.<br /><a href="index.html#top" title="One, two, JUMP! (to the top of this page).">Top of page</a> | <a href="../atom/index.html%3Fsection=categories&amp;limit=7" title="Atom Syndication Feed">XML Feed</a></p></div>
+
+</div> <!-- page end -->
+
+</body>
+</html>

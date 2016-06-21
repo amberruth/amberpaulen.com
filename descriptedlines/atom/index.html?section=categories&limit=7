@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-gb" xmlns="http://www.w3.org/2005/Atom"><title type="text">Descriptedlines - Categories</title>
+<subtitle type="text">Writing</subtitle>
+<link rel="self" href="http://amberpaulen.com/descriptedlines/atom/?section=categories&amp;limit=7" />
+<link rel="alternate" type="text/html" href="http://amberpaulen.com/descriptedlines/" />
+<id>tag:descriptedlines.com,2005:b71662ed6c2409874275bc2bdfc2aee2/categories</id>
+<generator uri="http://textpattern.com/" version="4.5.4">Textpattern</generator>
+<updated>2015-10-31T20:09:24Z</updated>
+<author>
+		<name>Simon Griffee</name>
+		<email>&#115;&#105;&#109;&#111;&#110;&#64;&#115;&#105;&#109;&#111;&#110;&#103;&#114;&#105;&#102;&#102;&#101;&#101;&#46;&#99;&#111;&#109;</email>
+		<uri>http://amberpaulen.com/descriptedlines/</uri>
+</author>
+</feed>
