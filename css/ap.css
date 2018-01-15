@@ -98,7 +98,7 @@ body#archives #content p em.bookauthorarchives {text-transform:uppercase !import
 ul {list-style:disc outside; padding-left:1em; margin:1em 0;}
 ul.left {float:left;}
 ul.right {float:right;}
-ul.worklist {text-align:center; list-style:none; padding-left:0; margin-left:0;}
+ul.worklist {list-style:none; padding-left:0; margin-left:0;}
 ul.unstyled {list-style:none; padding-left:0; margin-left:0;}
 dl {font-size:1em; line-height:1.4em;}
 div#content li, div#content dd {font-size:16px; line-height:24px;}
