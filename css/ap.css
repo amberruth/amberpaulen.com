@@ -14,7 +14,7 @@ a:link {color:#360; padding-bottom:0;}
 a:visited {color:#606; padding-bottom:0;}
 a:hover {color:#606; text-decoration:none;}
 a:active {color:#900; outline:none;}
-img {border:1px solid #eee; text-decoration:none; display:block; margin:0 0 20px;}
+img {border:1px solid #eee; text-decoration:none; display:block; margin:0 0 25px;}
 a:link img, a:visited img {border:0; border-style:none; text-decoration:none; border-bottom:none;}
 a.imglink:link, a.imglink:visited {border: none;}
 .homelink {border:0; color:#000; padding:1em;}
@@ -23,7 +23,7 @@ h1 a:link, h1 a:visited {text-decoration:none;}
 
 /* =Layout ------------------------------------------------ */
 
-h1 {font-family:georgia, serif; margin:0 0 0.5em; font-weight:bold; color:#000; font-size:24px; line-height:28px;}
+h1 {font-family:georgia, serif; margin:0 0 0.5em; font-weight:bold; color:#000; font-size:30px; line-height:38px;}
 h1.maintitlewithextended {margin-bottom:0;}
 div#content h1 a:link, div#content h1 a:visited {color:#000; text-decoration:none !important;}
 div#content h1 a:hover, div#content h1 a:active {color:#606; margin-top:0 !important;}
