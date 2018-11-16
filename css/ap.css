@@ -6,7 +6,7 @@ Last update: 2014-11-27
 
 * {color:#000; margin:0; padding:0;}
 body, html {height:100%;}
-body {text-align:center; color:#000; font-family:georgia, serif; font-size:100%; margin:0 auto 12em; max-width:40em; text-align:left; padding:2em 1em; padding-bottom:10em !important; background:#fafafa url(../img/header-bg.jpg) repeat-x 0 0; background-position:0 -180px;}
+body {text-align:center; color:#000; font-family:georgia, serif; font-size:100%; margin:0 auto 12em; max-width:40em; text-align:left; padding:2em 1em; padding-bottom:300px !important; background:#fafafa url(../img/header-bg.jpg) repeat-x 0 0; background-position:0 -180px;}
 p.skip {display:none;}
 /* =Links, =Images ------------------------------------------------ */
 a {text-decoration:none; border-bottom:1px solid #D4DFCA;} /* Prevent visible outline on clicked anchors in Firefox */
