@@ -29,10 +29,10 @@ div#content h1 a:link, div#content h1 a:visited {color:#000; text-decoration:non
 div#content h1 a:hover, div#content h1 a:active {color:#606; margin-top:0 !important;}
 h2 {font-size:20px; line-height:24px; font-family:georgia, serif; margin:1em 0 0.25em; font-weight:bold; color:#000;}
 body.cv h2 {border-bottom:double #eee; padding-bottom:0.15em;}
-h2.bookextendedtitle {margin-top:0; font-size:16px; margin-bottom:2.4em;}
+h2.bookextendedtitle {margin-top:0; font-size:18px; margin-bottom:2.4em;}
 body#search h2 {margin-top:0;}
 h2#comments {margin-top:3em;}
-h3 {font-size:16px; line-height:20px; font-weight:bold; margin:1em 0 0.5em; color:#000;}
+h3 {font-size:18px; line-height:24px; font-weight:bold; margin:1em 0 0.5em; color:#000;}
 h3#commentator {font-family:georgia, serif; margin-bottom:0 !important;}
 h4 {font-size:1em; font-weight:normal; font-style:italic; margin:1.7em 0 0.5em;}
 h5 {font-size:0.85em; text-transform:uppercase; margin:1.7em 0 0.5em;}
@@ -40,10 +40,10 @@ h6 {font-size:0.8em; text-transform:uppercase; font-style:italic; margin:1.7em 0
 /****************************************************************************
 =Paragraphs, =Misc
 ****************************************************************************/
-p, address {font-size:16px; line-height:24px; margin:0 0 0.8em; font-style:normal;}
+p, address {font-size:18px; line-height:28px; margin:0 0 0.8em; font-style:normal;}
 body#archives #content p {margin-bottom:0.25em;}
 body#archives #content p em {font-size:0.8em; letter-spacing:normal; font-style:italic;}
-li {font-size:16px; line-height:24px;}
+li {font-size:18px; line-height:28px;}
 
 ul.paging {list-style:none;}
 ul.paging li {font-size:11px !important; margin-bottom:1.4em; text-transform:uppercase; letter-spacing:0.1em;}
@@ -101,7 +101,7 @@ ul.right {float:right;}
 ul.worklist {list-style:none; padding-left:0; margin-left:0;}
 ul.unstyled {list-style:none; padding-left:0; margin-left:0;}
 dl {font-size:1em; line-height:1.4em;}
-div#content li, div#content dd {font-size:16px; line-height:24px;}
+div#content li, div#content dd {font-size:18px; line-height:28px;}
 /*ul ul, ol ol {margin-left: 1.5em;
 }*/
 ul, dl, ol {margin:1em 0 1em 0.20em;
