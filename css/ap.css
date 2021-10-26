@@ -1,12 +1,18 @@
 /*
 Amber Paulen master stylesheet by Simon Griffee - hypertexthero.com
-Last update: 2014-11-27
+Last update: 2021-10-26
 
 */
 
 * {color:#000; margin:0; padding:0;}
 body, html {height:100%;}
-body {text-align:center; color:#000; font-family:georgia, serif; font-size:100%; margin:0 auto 12em; max-width:40em; text-align:left; padding:2em 1em; padding-bottom:300px !important; background:#fafafa url(../img/header-bg.jpg) repeat-x 0 0; background-position:0 -180px;}
+body {text-align:center; color:#000; font-family:"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif; font-size:100%; margin:0 auto 12em; max-width:40em; text-align:left; padding:2em 1em; padding-bottom:300px !important;
+
+background-color: #fafafa;
+background-image: url("../img/redox-02.png");
+
+/*background:#fafafa url(../img/header-bg.jpg) repeat-x 0 0; background-position:0 -180px;*/
+}
 p.skip {display:none;}
 /* =Links, =Images ------------------------------------------------ */
 a {text-decoration:none; border-bottom:1px solid #D4DFCA;} /* Prevent visible outline on clicked anchors in Firefox */
@@ -23,27 +29,27 @@ h1 a:link, h1 a:visited {text-decoration:none;}
 
 /* =Layout ------------------------------------------------ */
 
-h1 {font-family:georgia, serif; margin:0 0 0.5em; font-weight:bold; color:#000; font-size:30px; line-height:38px;}
+h1 {margin:0 0 0.5em; font-weight:bold; color:#000; font-size:30px; line-height:38px;}
 h1.maintitlewithextended {margin-bottom:0;}
 div#content h1 a:link, div#content h1 a:visited {color:#000; text-decoration:none !important;}
 div#content h1 a:hover, div#content h1 a:active {color:#606; margin-top:0 !important;}
-h2 {font-size:20px; line-height:24px; font-family:georgia, serif; margin:1em 0 0.25em; font-weight:bold; color:#000;}
+h2 {font-size:22px; line-height:26px; margin:1em 0 0em; font-weight:bold; color:#000;}
 body.cv h2 {border-bottom:double #eee; padding-bottom:0.15em;}
-h2.bookextendedtitle {margin-top:0; font-size:18px; margin-bottom:2.4em;}
+h2.bookextendedtitle {margin-top:0; font-size:19px; margin-bottom:2.4em;}
 body#search h2 {margin-top:0;}
 h2#comments {margin-top:3em;}
-h3 {font-size:18px; line-height:24px; font-weight:bold; margin:1em 0 0.5em; color:#000;}
-h3#commentator {font-family:georgia, serif; margin-bottom:0 !important;}
+h3 {font-size:19px; line-height:24px; font-weight:bold; margin:1em 0 0.5em; color:#000;}
+h3#commentator {margin-bottom:0 !important;}
 h4 {font-size:1em; font-weight:normal; font-style:italic; margin:1.7em 0 0.5em;}
 h5 {font-size:0.85em; text-transform:uppercase; margin:1.7em 0 0.5em;}
 h6 {font-size:0.8em; text-transform:uppercase; font-style:italic; margin:1.7em 0 0.5em;}
 /****************************************************************************
 =Paragraphs, =Misc
 ****************************************************************************/
-p, address {font-size:18px; line-height:28px; margin:0 0 0.8em; font-style:normal;}
+p, address {font-size:19px; line-height:30px; margin:0 0 0.8em; font-style:normal;}
 body#archives #content p {margin-bottom:0.25em;}
 body#archives #content p em {font-size:0.8em; letter-spacing:normal; font-style:italic;}
-li {font-size:18px; line-height:28px;}
+li {font-size:19px; line-height:30px;}
 
 ul.paging {list-style:none;}
 ul.paging li {font-size:11px !important; margin-bottom:1.4em; text-transform:uppercase; letter-spacing:0.1em;}
@@ -53,7 +59,7 @@ body#search p.date {text-align:left;}
 p.feeds {padding-top:3em;}
 p.end {font-size:11px; margin:2em 0; letter-spacing:0.2em;}
 body#article p.end {margin-bottom:2em !important;}
-p.caption {font-size:0.85em; margin:-1.2em 0 1.6em !important; font-style:italic; max-width:500px;}
+p.caption {font-size:1em; margin:-1.2em 0 1.6em !important; font-style:italic; max-width:500px;}
 p.caption a {text-decoration:none; border-bottom:1px dotted #9C6;}
 p.entry-summary {margin-bottom:3em;}
 body#blog p.end {margin-bottom:3em;}
@@ -95,13 +101,13 @@ body#archives #content p em.bookauthorarchives {text-transform:uppercase !import
 /****************************************************************************
 =Lists
 ****************************************************************************/
-ul {list-style:disc outside; padding-left:1em; margin:1em 0;}
+ul {list-style:disc outside; padding-left:1em; margin:1em 0 0.8em;}
 ul.left {float:left;}
 ul.right {float:right;}
-ul.worklist {list-style:none; padding-left:0; margin-left:0;}
+ul.worklist {list-style:none; padding-left:0; margin-left:0; margin-top:0.8em;}
 ul.unstyled {list-style:none; padding-left:0; margin-left:0;}
 dl {font-size:1em; line-height:1.4em;}
-div#content li, div#content dd {font-size:18px; line-height:28px;}
+div#content li, div#content dd {font-size:19px; line-height:30px;}
 /*ul ul, ol ol {margin-left: 1.5em;
 }*/
 ul, dl, ol {margin:1em 0 1em 0.20em;
