@@ -17,7 +17,7 @@ nav a {margin:5px;}
 body#about a#nav-about, 
 body#writing a#nav-writing,
 body#contact a#nav-contact
-{border:0; color:#000; font-weight:bold;}
+{border:0; color:#000;}
 
 p.skip {display:none;}
 /* =Links, =Images ------------------------------------------------ */
