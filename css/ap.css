@@ -7,18 +7,24 @@ Last update: 2021-10-26
 * {color:#000; margin:0; padding:0;}
 body, html {height:100%;}
 body {text-align:center; color:#000; font-family:"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif; font-size:100%; margin:0 auto 12em; max-width:40em; text-align:left; padding:2em 1em; padding-bottom:300px !important;
-
 background-color: #fafafa;
 background-image: url("../img/redox-02.png");
-
 /*background:#fafafa url(../img/header-bg.jpg) repeat-x 0 0; background-position:0 -180px;*/
 }
+
+nav {margin:0 0 20px; text-transform:uppercase; letter-spacing:0.1em; font-size:15px;}
+nav a {margin:5px;}
+body#about a#nav-about, 
+body#writing a#nav-writing,
+body#contact a#nav-contact
+{border:0; color:#000; font-weight:bold;}
+
 p.skip {display:none;}
 /* =Links, =Images ------------------------------------------------ */
 a {text-decoration:none; border-bottom:1px solid #D4DFCA;} /* Prevent visible outline on clicked anchors in Firefox */
-a:link {color:#360; padding-bottom:0;}
-a:visited {color:#606; padding-bottom:0;}
-a:hover {color:#606; text-decoration:none;}
+a:link {color:#107f01; padding-bottom:0;}
+a:visited {color:#0f7ffe; padding-bottom:0;}
+a:hover {color:#0f7ffe; background:#ffc; text-decoration:none;}
 a:active {color:#900; outline:none;}
 img {border:1px solid #eee; text-decoration:none; display:block; margin:0 0 20px;}
 a:link img, a:visited img {border:0; border-style:none; text-decoration:none; border-bottom:none;}
