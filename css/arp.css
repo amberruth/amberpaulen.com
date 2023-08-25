@@ -36,10 +36,12 @@ h1 a:link, h1 a:visited {text-decoration:none;}
 /* =Layout ------------------------------------------------ */
 
 h1 {margin:0 0 0.5em; font-weight:bold; color:#000; font-size:30px; line-height:38px;}
+body#writing h1 {font-weight:normal;}
 h1.maintitlewithextended {margin-bottom:0;}
 div#content h1 a:link, div#content h1 a:visited {color:#000; text-decoration:none !important;}
 div#content h1 a:hover, div#content h1 a:active {color:#606; margin-top:0 !important;}
 h2 {font-size:26px; line-height:26px; margin:1em 0 0.5em; font-weight:bold; color:#000;}
+body#writing h2 {font-weight:normal;}
 body.cv h2 {border-bottom:double #eee; padding-bottom:0.15em;}
 h2.bookextendedtitle {margin-top:0; font-size:19px; margin-bottom:2.4em;}
 body#search h2 {margin-top:0;}
