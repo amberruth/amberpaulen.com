@@ -1,6 +1,6 @@
 body, html {height:100%;}
 body {text-align:center; color:#000; font-family:"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif; font-size:100%; margin:0 auto 12em; max-width:40em; text-align:left; padding:2em 1em; padding-bottom:300px !important;
-background-color: #fafafa;
+background-color: rgba(255, 235, 188, 0.75);
 background-image: url("../img/redox-02.png");
 /*background:#fafafa url(../img/header-bg.jpg) repeat-x 0 0; background-position:0 -180px;*/
 }
