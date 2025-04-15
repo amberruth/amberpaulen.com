@@ -9,6 +9,7 @@ nav {margin:0 0 20px; text-transform:uppercase; letter-spacing:0.1em; font-size:
 nav a {margin:5px;}
 body#about a#nav-about, 
 body#writing a#nav-writing,
+body#workshops a#nav-workshops,
 body#contact a#nav-contact
 {border:0; color:#000;}
 
