@@ -1,9 +1,6 @@
-body, html {height:100%;}
-body {text-align:center; color:#111; font-family:"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif; font-size:100%; margin:0 auto 12em; max-width:44em; text-align:left; padding:2em 1em; padding-bottom:400px !important;
-background-color: rgba(255, 235, 188, 0.75);
-background-image: url("../img/redox-02.png");
-/*background:#fafafa url(../img/header-bg.jpg) repeat-x 0 0; background-position:0 -180px;*/
-}
+body {
+   text-align:center; color:#111; font-family:"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif; font-size:100%; margin:0 auto 3em; max-width:44em; text-align:left; padding:2em 1em 5em; background-color: rgba(255, 235, 188, 0.75); background-image: url("../img/redox-02.png");
+     }
 
 nav {margin:0 0 20px; text-transform:uppercase; letter-spacing:0.1em; font-size:15px;}
 nav a {margin:5px;}
@@ -77,8 +74,7 @@ li.current a {color:#111 !important;}
 
 hr {height:1px; background:#111; margin:12px auto 12px; border:none 0; border-top:1px solid #111; display:block;}
 * html body hr {height:0; background:none; margin-top:-10px;}
-blockquote {margin:1em 0 1.4em 0; padding-left:2em; background:url(../images/blockquote-bg.gif) no-repeat top left;}
-blockquote p {color:#330;}
+blockquote {margin:1em 0 1.4em 0; padding-left:1em; background:url(../images/blockquote-bg.gif) no-repeat top left; border-left:1px solid #aaa;}
 pre {font-family:monospace; font-size:1em; line-height:1.5em; background:#eee; padding:10px;}
 em, i, cite {font-style:italic;}
 strong, b {font-weight:bold;}
