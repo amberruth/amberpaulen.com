@@ -36,10 +36,10 @@ div#content h1 a:hover, div#content h1 a:active {color:#606; margin-top:0 !impor
 h2 {font-size:26px; line-height:26px; margin:1em 0 0.5em; font-weight:bold; color:#000;}
 body#writing h2 {font-weight:normal;}
 body.cv h2 {border-bottom:double #eee; padding-bottom:0.15em;}
-h2.bookextendedtitle {margin-top:0; font-size:19px; margin-bottom:2.4em;}
+h2.bookextendedtitle {margin-top:0; font-size:1em; margin-bottom:2.4em;}
 body#search h2 {margin-top:0;}
 h2#comments {margin-top:3em;}
-h3 {font-size:19px; line-height:24px; font-weight:bold; margin:1em 0 0.5em; color:#000;}
+h3 {font-size:1em; line-height:1.7em; font-weight:bold; margin:1em 0 0.5em; color:#000;}
 h3#commentator {margin-bottom:0 !important;}
 h4 {font-size:1em; font-weight:normal; font-style:italic; margin:1.7em 0 0.5em;}
 h5 {font-size:0.85em; text-transform:uppercase; margin:1.7em 0 0.5em;}
@@ -47,10 +47,10 @@ h6 {font-size:0.8em; text-transform:uppercase; font-style:italic; margin:1.7em 0
 /****************************************************************************
 =Paragraphs, =Misc
 ****************************************************************************/
-p, address {font-size:19px; line-height:30px; margin:0 0 0.8em; font-style:normal;}
+p, address {font-size:1em; line-height:1.8em; margin:0 0 0.8em; font-style:normal;}
 body#archives #content p {margin-bottom:0.25em;}
 body#archives #content p em {font-size:0.8em; letter-spacing:normal; font-style:italic;}
-li {font-size:19px; line-height:30px;}
+li {font-size:1em; line-height:1.8em;}
 
 ul.paging {list-style:none;}
 ul.paging li {font-size:11px !important; margin-bottom:1.4em; text-transform:uppercase; letter-spacing:0.1em;}
@@ -108,7 +108,7 @@ ul.right {float:right;}
 ul.worklist {list-style:none; padding-left:0; margin-left:0; margin-top:0.8em;}
 ul.unstyled {list-style:none; padding-left:0; margin-left:0;}
 dl {font-size:1em; line-height:1.4em;}
-div#content li, div#content dd {font-size:19px; line-height:30px;}
+div#content li, div#content dd {font-size:1em; line-height:1.8em;}
 /*ul ul, ol ol {margin-left: 1.5em;
 }*/
 ul, dl, ol {margin:1em 0 1em 0.20em;
@@ -121,7 +121,7 @@ ol {font-size:inherit; list-style:decimal inside;}
 textarea {width:90%;}
 input, textarea {padding:4px; background:#fff; margin:0 0 1em; border:1px solid #ccc;}
 textarea {min-height:15em; margin-bottom:1em;}
-label, form#search input {font-size:14px; line-height:19px;}
+label, form#search input {font-size:1em; line-height:1.8em;}
 form#search input {padding:4px;}
 label span {font-size:12px;}
 div.button input {width:auto; padding:10px;}
