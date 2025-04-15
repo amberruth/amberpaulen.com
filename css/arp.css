@@ -29,17 +29,17 @@ h1 a:link, h1 a:visited {text-decoration:none;}
 
 /* =Layout ------------------------------------------------ */
 
-h1 {margin: 0 0 0.5em; font-weight:bold; color:#111; font-size:1.8em; line-height:1.8em;}
+h1 {margin: 0 0 0.5em; font-weight:500; color:#111; font-size:1.8em; line-height:1.8em;}
 body#writing h1 {font-weight:bold;}
 h1.maintitlewithextended {margin-bottom:0;}
 div#content h1 a:link, div#content h1 a:visited {color:#111; text-decoration:none !important;}
 div#content h1 a:hover, div#content h1 a:active {color:#606; margin-top:0 !important;}
-h2 {font-size:1.4em; line-height:1.4em; margin:0.5em 0 0.5em; font-weight:bold; color:#111;}
+h2 {font-size:1.4em; line-height:1.4em; margin:0.5em 0 0.5em; font-weight:500; color:#111;}
 body.cv h2 {border-bottom:double #eee; padding-bottom:0.15em;}
 h2.bookextendedtitle {margin-top:0; font-size:1em; margin-bottom:2.4em;}
 body#search h2 {margin-top:0;}
 h2#comments {margin-top:3em;}
-h3 {font-size:1em; line-height:1.7em; font-weight:bold; margin:1em 0 0.5em; color:#111;}
+h3 {font-size:1em; line-height:1.7em; font-weight:500; margin:1em 0 0.5em; color:#111;}
 h3#commentator {margin-bottom:0 !important;}
 h4 {font-size:1em; font-weight:normal; font-style:italic; margin:1.7em 0 0.5em;}
 h5 {font-size:0.85em; text-transform:uppercase; margin:1.7em 0 0.5em;}
