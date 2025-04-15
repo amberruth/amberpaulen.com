@@ -2,8 +2,8 @@ body {
    text-align:center; color:#111; font-family:"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif; font-size:100%; margin:0 auto 3em; max-width:44em; text-align:left; padding:2em 1em 5em; background-color: rgba(255, 235, 188, 0.75); background-image: url("../img/redox-02.png");
      }
 
-nav {margin:0 0 0.8em -0.5em; text-transform:uppercase; letter-spacing:0.1em; font-size:0.9em; line-height:1.8em;}
-nav a {margin:0 0.5em 0 0.5em; padding:0.5em;}
+nav {margin:0 0 0.8em -0.75em; text-transform:uppercase; letter-spacing:0.1em; font-size:0.9em; line-height:1.8em;}
+nav a {margin:0 0.25em 0 0.5em; padding:0.5em;}
 body#about a#nav-about, 
 body#writing a#nav-writing,
 body#workshops a#nav-workshops,
